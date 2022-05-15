@@ -289,6 +289,7 @@ implements vscode.CompletionItemProvider, vscode.HoverProvider {
                 );
                 item.documentation = this.describeAccount(accountName);
                 item.range = wordRange;
+                item.sortText = `Level${accountName.split(":").length}__${accountName}`
                 item.insertText = accountName;
                 return item;
             }
