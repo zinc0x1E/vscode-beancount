@@ -307,7 +307,6 @@ implements vscode.CompletionItemProvider, vscode.HoverProvider {
             item.range = wordRange;
             list.push(item);
           });
-          console.log('[VSCode Beancount Log]', 'provideCompleteionItems', 'case default', 'completion items list', list);
           resolve(list);
           return;
         }
